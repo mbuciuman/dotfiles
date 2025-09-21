@@ -35,7 +35,7 @@ vim.opt.shortmess:append("I")
 vim.keymap.set("n", "<leader>ve", ":edit ~/.config/nvim/lua/config/lazy.lua<CR>", { noremap = true, silent = true })
 
 -- Reload lazy.nvim config
-vim.keymap.set("n", "<leader>rr", ":source ~/.config/nvim/lua/config/lazy.lua<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>vs", ":source ~/.config/nvim/lua/config/lazy.lua<CR>", { noremap = true, silent = true })
 
 -- Airline settings
 -- vim.g["airline#extensions#tabline#enabled"] = 1   -- uncomment if you want it
@@ -46,19 +46,15 @@ vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 
+-- Set numbers
+vim.opt.number = true
+
 -- Setup lazy.nvim
 require("lazy").setup({
   spec = {
     -- import your plugins
     { import = "plugins" },
   },
-  { "nvim-lualine/lualine.nvim" },
-  { "tpope/vim-fugitive" },
-  { 'scrooloose/nerdtree' },
-  { 'Xuyuanp/nerdtree-git-plugin' },
-  { 'scrooloose/syntastic' },
-  { 'vim-airline/vim-airline' },
-  { 'vimwiki/vimwiki' },
   -- Configure any other settings here. See the documentation for more details.
   -- colorscheme that will be used when installing plugins.
   install = { colorscheme = { "habamax" } },
