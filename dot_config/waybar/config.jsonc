@@ -20,7 +20,7 @@
     "modules-right": [
         "custom/weather",
         "pulseaudio",
-        "temperature",
+//        "temperature",
         "network",
         "backlight",
         "battery",
@@ -32,7 +32,7 @@
         "format": "{icon} {name}",
         "format-icons": {
             "locked": "",
-            "unlocked": ""
+            "unlocked": ""
         }
     },
     "sway/mode": {
@@ -58,11 +58,11 @@
     },
     "clock": {
         "interval": 1,
-        "format": "{:%A %d. %b %T}",
+        "format": "{:%A, %b %d | %T}",
         "tooltip-format": "<tt><small>{calendar}</small></tt>",
         "calendar": {
             "format": {
-                "today": "<span color='#ff5555'><b><u>{}</u></b></span>"
+                "today": "<span color='#dd6819'><b><u>{}</u></b></span>"
             }
         }
     },
@@ -72,7 +72,7 @@
         "interval": 1000,
         "critical-threshold": 80,
         // "format-critical": "{temperatureC}°C {icon}",
-        "format": "{temperatureC}°C"
+        "format": "{temperatureC}°F"
         //"format-icons": ["", "", ""]
     },
     "backlight": {
@@ -126,9 +126,9 @@
     "network": {
         "interval": 1000,
         "format-wifi": "{icon}",
-        "format-ethernet": "{ipaddr}/{cidr} ",
+        "format-ethernet": "{ipaddr}/{cidr} ",
         "tooltip-format": "{essid}\n{ifname} via {gwaddr}\n{ipaddr}/{cidr}",
-        "format-linked": "{ifname} (No IP) ",
+        "format-linked": "{ifname} (No IP) 󰈂",
         "format-disconnected": "󰤭",
         "format-alt": "{essid}",
         "format-icons": [
@@ -141,14 +141,14 @@
     },
     "pulseaudio": {
         "format": "{icon} {format_source}",
-        "format-muted": " {format_source}",
+        "format-muted": "󰝟 {format_source}",
         "format-source": "",
         "format-source-muted": " ",
-        "format-bluetooth": "{icon} {format_source}",
-        "format-bluetooth-muted": "{icon} {format_source}",
+        "format-bluetooth": "{icon}  {format_source}",
+        "format-bluetooth-muted": "{icon} 󰗿 {format_source}",
         "format-icons": {
             "headphone": "",
-            "hands-free": "",
+            "hands-free": "󰠕",
             "headset": "󰋎",
             "phone": " ",
             "portable": " ",
@@ -172,10 +172,10 @@
         }
     },
     "custom/weather": {
-        "format": "{}°C",
+        "format": "{}°F",
         "tooltip": true,
         "interval": 3600,
-        "exec": "wttrbar --date-format \"%d.%m.%Y\" -l de",
+        "exec": "wttrbar --date-format \"%Y.%m.%d\" -l en --nerd --fahrenheit",
         "return-type": "json"
     }
 }

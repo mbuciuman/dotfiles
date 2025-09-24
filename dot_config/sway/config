@@ -9,6 +9,25 @@ set $menu fuzzel
 
 set $mod Mod1
 
+### Workspace assignments
+assign [app_id="firefox"] 1
+assign [app_id="Alacritty"] 2
+assign [app_id="Discord"] 5
+assign [app_id="Spotify"] 6
+
+### Autostart applications
+# Firefox to workspace 1
+exec --no-startup-id firefox
+
+# Alacritty with tmux on workspace 2
+exec --no-startup-id alacritty -e ~/.config/alacritty/start_tmux_dev.sh
+
+# Discord to workspace 5
+exec --no-startup-id discord
+
+# Spotify to workspace 6
+exec --no-startup-id spotify
+
 ### Idle configuration
 #
 # Example configuration:
@@ -186,6 +205,10 @@ include /etc/sway/config.d/*
 #
 include $HOME/.config/sway/config.d/windows
 
+# Wallpaper
+set $default_wallpaper $HOME/Downloads/Subverses_Wallpaper_1440.png
+output * bg $default_wallpaper fill
+
 #
 # Volume, Monitor brightness, Media players
 #
@@ -204,11 +227,17 @@ include $HOME/.config/sway/config.d/windows
  
 bindsym XF86AudioRaiseVolume exec swayosd-client --output-volume raise
 bindsym XF86AudioLowerVolume exec swayosd-client --output-volume lower
-bindsym XF86AudioMute exec swayosd-client --output-volume mute-toggle
+#bindsym XF86AudioMute exec swayosd-client --output-volume mute-toggle
+#bindsym XF86AudioMicMute exec swayosd-client --input-volume mute-toggle
+# Mic mute key
+bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle && swayosd-client --microphone
+
+# Audio mute key
+bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle && swayosd-client --speaker
+
 
 bindsym Shift+XF86AudioRaiseVolume exec swayosd-client --input-volume raise
 bindsym Shift+XF86AudioLowerVolume exec swayosd-client --input-volume lower
-bindsym XF86AudioMicMute exec swayosd-client --input-volume mute-toggle
 
 bindsym XF86MonBrightnessUp exec swayosd-client --brightness raise
 bindsym XF86MonBrightnessDown exec swayosd-client --brightness lower
@@ -283,3 +312,7 @@ bar swaybar_command waybar
 include $HOME/.config/sway/config.d/swayfx
 
 exec swayosd-server
+
+# start copyq
+exec_always --no-startup-id copyq
+

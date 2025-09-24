@@ -49,6 +49,12 @@ vim.opt.expandtab = true
 -- Set numbers
 vim.opt.number = true
 
+-- Set term gui colors for bufferline
+vim.opt.termguicolors = true
+
+-- Enable dartls LSP
+vim.lsp.enable("dartls")
+
 -- Setup lazy.nvim
 require("lazy").setup({
   spec = {

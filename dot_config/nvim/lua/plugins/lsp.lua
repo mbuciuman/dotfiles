@@ -1,21 +1,20 @@
 return {
-  "neovim/nvim-lspconfig",
-  enabled = false,
-  config = function()
-    local lspconfig = require("lspconfig")
+    -- LSP Configuration
+    {
+        "neovim/nvim-lspconfig",
+    },
 
-    -- Dart LSP is set up automatically by flutter-tools,
-    -- but you can add more servers here if needed.
-    local capabilities = require("cmp_nvim_lsp").default_capabilities()
-
-    -- Example: Lua LSP for editing Neovim config
-    lspconfig.lua_ls.setup {
-      capabilities = capabilities,
-      settings = {
-        Lua = {
-          diagnostics = { globals = { "vim" } },
+    -- Debug Adapter Configuration
+    {
+        "williamboman/mason.nvim",
+        opts = {},
+    },
+    {
+        "jay-babu/mason-nvim-dap.nvim",
+        dependencies = { "mfussenegger/nvim-dap" },
+        opts = {
+            ensure_installed = { "dart" },
         },
-      },
-    }
-  end,
+    },
 }
+
