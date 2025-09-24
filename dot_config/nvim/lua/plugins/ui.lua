@@ -2,26 +2,19 @@ return {
     {
         "nvim-lualine/lualine.nvim",
         dependencies = { "nvim-tree/nvim-web-devicons" },
-        config = function()
-            require("lualine").setup()
-        end,
     },
     {
         "akinsho/bufferline.nvim",
         version = "*",
         dependencies = "nvim-tree/nvim-web-devicons",
-        config = function()
-            require("bufferline").setup()
-        end,
     },
     {
         "nvim-tree/nvim-tree.lua",
         enabled = false,
         dependencies = { "nvim-tree/nvim-web-devicons" },
-        config = function()
-            require("nvim-tree").setup()
-            vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>", { silent = true })
-        end,
+        keys = {
+            { "<leader>e", "<cmd>NvimTreeToggle<cr>", desc = "Toggle NvimTree" },
+        },
     },
     {
         "nvim-neo-tree/neo-tree.nvim",

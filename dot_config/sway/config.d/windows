@@ -43,10 +43,9 @@
 #
 # swaymsg -t get_tree | grep app_id
 #
-    for_window [app_id="ulauncher"]				floating enable, move position center
+    #for_window [app_id="ulauncher"]				floating enable, move position center
 
 #
 # Opacity Setting
 #
     for_window [class=".*"] opacity 1
-    for_window [class="VSCodium"] opacity 0.95

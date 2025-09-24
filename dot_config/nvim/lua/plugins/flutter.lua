@@ -6,15 +6,7 @@ return {
         "stevearc/dressing.nvim", -- optional for vim.ui.select
     },
     opts = {
-        cmd = {
-            "dart",
-            "language-server",
-            "--protocol=lsp",
-        },
-    },
-
-    config = function()
-        require('flutter-tools').setup{}
-    end
+        flutter_path = "/home/mbuci/snap/flutter/common/flutter/bin/flutter",
+    }
 }
 

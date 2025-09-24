@@ -5,7 +5,7 @@
 #
 # Rounded corners
 #
-	corner_radius 10
+corner_radius 0
 
 #
 # Separators
@@ -15,11 +15,18 @@
 #
 # Shadows
 #
-	shadows enable
+shadows disable
 
 #
 # Waybar
 #
+#layer_effects "waybar" {
+#    blur enable;
+#    blur_xray enable;
+#    blur_ignore_transparent enable;
+#    shadows enable;
+#    corner_radius 0;
+#}
 #layer_effects "waybar" {
 #    blur enable;
 #	blur_brightness 2
@@ -29,8 +36,9 @@
 #}
 
 #
+# Alacritty
 #
-#	for_window [app_id="Alacritty"] {
-		blur enable
-#	}
-  for_window [app_id="Alacritty"] blur disable
+#for_window [app_id="Alacritty"] {
+#  blur disable;
+#  corner_radius 0;
+#}
