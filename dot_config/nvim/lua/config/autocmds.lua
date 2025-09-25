@@ -1,7 +1,15 @@
--- Format on save
-vim.api.nvim_create_autocmd("BufWritePre", {
-  pattern = "*",
+local cursorline_group =
+  vim.api.nvim_create_augroup("cursorline", { clear = true })
+vim.api.nvim_create_autocmd({ "VimEnter", "WinEnter", "BufWinEnter" }, {
+  group = cursorline_group,
   callback = function()
-    require("lazyvim.util").format({ force = true })
+    vim.opt_local.cursorline = true
   end,
 })
+vim.api.nvim_create_autocmd("WinLeave", {
+  group = cursorline_group,
+  callback = function()
+    vim.opt_local.cursorline = false
+  end,
+})
+

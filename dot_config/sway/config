@@ -219,8 +219,8 @@ output * bg $default_wallpaper fill
      bindsym $mod+Shift+F1 exec swayosd-client --input-volume mute-toggle
      bindsym $mod+Shift+F3 exec pactl set-source-volume @DEFAULT_SOURCE@ +5%
      bindsym $mod+Shift+F2 exec pactl set-source-volume @DEFAULT_SOURCE@ -5%
-     bindsym $mod+F8 exec swayosd-client --brightness raise
-     bindsym $mod+F7 exec swayosd-client --brightness lower
+     bindsym $mod+F6 exec brightnessctl s '+10%'
+     bindsym $mod+F5 exec brightnessctl s '10%-'
      bindsym $mod+p exec playerctl play-pause
      bindsym $mod+Plus exec playerctl next
      bindsym $mod+o exec playerctl previous
@@ -239,8 +239,8 @@ bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle && swayosd-
 bindsym Shift+XF86AudioRaiseVolume exec swayosd-client --input-volume raise
 bindsym Shift+XF86AudioLowerVolume exec swayosd-client --input-volume lower
 
-bindsym XF86MonBrightnessUp exec swayosd-client --brightness raise
-bindsym XF86MonBrightnessDown exec swayosd-client --brightness lower
+bindsym XF86MonBrightnessUp exec brightnessctl s '+10%'
+bindsym XF86MonBrightnessDown exec brightnessctl s '-10%'
  
 # bindsym --locked XF86KbdBrightnessUp exec ~/.config/sway/scripts/kbdlight.sh n
 # bindsym --locked XF86KbdBrightnessDown exec ~/.config/sway/scripts/kbdlight.sh p
@@ -248,11 +248,11 @@ bindsym XF86MonBrightnessDown exec swayosd-client --brightness lower
 # Screenshots
 #
 # Window
-bindsym $mod+F4 exec shotman -c window -C
+bindsym $mod+F7 exec shotman -c window -C
 # Monitor
-bindsym $mod+F5 exec shotman -c output -C
+bindsym $mod+F8 exec shotman -c output -C
 # Region
-bindsym $mod+F6 exec shotman -c region -C
+bindsym $mod+F9 exec shotman -c region -C
 
 #
 # JetBrains Config
