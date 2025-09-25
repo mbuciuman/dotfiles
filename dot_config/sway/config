@@ -74,15 +74,23 @@ exec --no-startup-id spotify
 #
 # Moving around:
 #
-    bindsym $mod+$left focus left
-    bindsym $mod+$down focus down
-    bindsym $mod+$up focus up
-    bindsym $mod+$right focus right
+    bindsym $mod+h focus left
+    bindsym $mod+j focus down
+    bindsym $mod+k focus up
+    bindsym $mod+l focus right
+    # bindsym $mod+$left focus left
+    # bindsym $mod+$down focus down
+    # bindsym $mod+$up focus up
+    # bindsym $mod+$right focus right
 
-    bindsym $mod+Shift+$left move left
-    bindsym $mod+Shift+$down move down
-    bindsym $mod+Shift+$up move up
-    bindsym $mod+Shift+$right move right
+    bindsym $mod+Shift+l move right
+    bindsym $mod+Shift+j move down
+    bindsym $mod+Shift+k move up
+    bindsym $mod+Shift+h move left
+    # bindsym $mod+Shift+$left move left
+    # bindsym $mod+Shift+$down move down
+    # bindsym $mod+Shift+$up move up
+    # bindsym $mod+Shift+$right move right
 #
 # Workspaces:
 #
@@ -96,7 +104,7 @@ exec --no-startup-id spotify
     bindsym $mod+8 workspace number 8
     bindsym $mod+9 workspace number 9
     bindsym $mod+0 workspace number 10
-    
+
     bindsym $mod+Shift+1 move container to workspace number 1
     bindsym $mod+Shift+2 move container to workspace number 2
     bindsym $mod+Shift+3 move container to workspace number 3
@@ -161,7 +169,7 @@ exec --no-startup-id spotify
     # If there are multiple scratchpad windows, this command cycles through them.
     bindsym $mod+minus scratchpad show
     bindsym $mod+Shift+plus for window in $(swaymsg -t get_tree | jq -r 'recurse(.nodes[]?) | select(.name == "__i3_scratch").floating_nodes[].id'); do swaymsg [ con_id="$window" ] move window to workspace scratch_all; done
-    
+
 #
 # Resizing containers:
 #
@@ -224,7 +232,7 @@ output * bg $default_wallpaper fill
      bindsym $mod+p exec playerctl play-pause
      bindsym $mod+Plus exec playerctl next
      bindsym $mod+o exec playerctl previous
- 
+
 bindsym XF86AudioRaiseVolume exec swayosd-client --output-volume raise
 bindsym XF86AudioLowerVolume exec swayosd-client --output-volume lower
 #bindsym XF86AudioMute exec swayosd-client --output-volume mute-toggle
@@ -241,7 +249,7 @@ bindsym Shift+XF86AudioLowerVolume exec swayosd-client --input-volume lower
 
 bindsym XF86MonBrightnessUp exec brightnessctl s '+10%'
 bindsym XF86MonBrightnessDown exec brightnessctl s '-10%'
- 
+
 # bindsym --locked XF86KbdBrightnessUp exec ~/.config/sway/scripts/kbdlight.sh n
 # bindsym --locked XF86KbdBrightnessDown exec ~/.config/sway/scripts/kbdlight.sh p
 #
@@ -274,7 +282,7 @@ bindsym $mod+F9 exec shotman -c region -C
     #    separator #ffffff
     #    statusline #ffffff
     #    background #00000099
-        
+
         #default bg color: 222222
     #    inactive_workspace #00000099 #00000099  #888888
         # default: 4c7899 285577 ffffff
@@ -289,7 +297,7 @@ bindsym $mod+F9 exec shotman -c region -C
 bar swaybar_command waybar
 #bar status_command i3status
 
-#set $custom_bar waybar 
+#set $custom_bar waybar
 #bar swaybar_command $custom_bar
 
 #exec easyeffects --gapplication-service
@@ -308,11 +316,10 @@ bar swaybar_command waybar
 
 #
 # SwayFX Config
-# 
+#
 include $HOME/.config/sway/config.d/swayfx
 
 exec swayosd-server
 
 # start copyq
 exec_always --no-startup-id copyq
-

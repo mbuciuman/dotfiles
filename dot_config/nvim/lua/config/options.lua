@@ -49,7 +49,8 @@ local opt = vim.opt
 opt.conceallevel = 0
 
 -- Show a vertical line at this character.
-opt.colorcolumn = "80"
+-- opt.colorcolumn = "80"
+-- vim.cmd([[highlight ColorColumn ctermbg=1 guibg=#FF000070]])
 
 -- Each buffer gets its own status line instead of sharing one.
 opt.laststatus = 2
