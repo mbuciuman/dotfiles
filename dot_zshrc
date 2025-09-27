@@ -80,3 +80,9 @@ source ~/.cargo/env
 
 # Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)
+
+# disable GNOME notifications
+gsettings set org.gnome.desktop.notifications show-banners false
+
+# Zoxide
+eval "$(zoxide init zsh)"

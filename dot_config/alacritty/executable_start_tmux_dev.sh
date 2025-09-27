@@ -1,10 +1,9 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Directories
-Notes='/home/mbuci/Documents/Repos/notes/Project\ Notes/TODO.md'
+Notes='/home/mbuci/Documents/Repos/notes/'
 Flutter='/home/mbuci/Documents/Repos/SubversesFlutterMVP/subverses_flutter/'
 Nvim='/home/mbuci/.config/nvim'
-#=~/projects/dir3
 
 # Start a new tmux session named "dev"
 tmux new-session -d -s dev -n "Notes" "zsh -c \"cd ~/Documents/Repos/notes/; nvim $Notes; exec zsh\""

@@ -9,12 +9,6 @@ set $menu fuzzel
 
 set $mod Mod1
 
-### Workspace assignments
-assign [app_id="firefox"] 1
-assign [app_id="Alacritty"] 2
-assign [app_id="Discord"] 5
-assign [app_id="Spotify"] 6
-
 ### Autostart applications
 # Firefox to workspace 1
 exec --no-startup-id firefox
@@ -27,6 +21,12 @@ exec --no-startup-id discord
 
 # Spotify to workspace 6
 exec --no-startup-id spotify
+
+### Workspace assignments
+assign [app_id="firefox"] 1
+assign [app_id="Alacritty"] 2
+assign [app_id="Discord"] 5
+assign [app_id="Spotify"] 6
 
 ### Idle configuration
 #
@@ -323,3 +323,6 @@ exec swayosd-server
 
 # start copyq
 exec_always --no-startup-id copyq
+
+# start mako
+exec_always mako --font 'JetBrainsMono NF 10' --background-color '#000000' --border-color '#dd6819' --default-timeout 7000 --width 400 --markup 1 --border-radius 5

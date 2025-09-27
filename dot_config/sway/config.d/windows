@@ -9,26 +9,43 @@
 	default_floating_border pixel 4
 	#font pango:monospace 0
 	font pango:JetBrainsMono NF ExtraBold 18
-	titlebar_padding 1
+	titlebar_padding 5
 	titlebar_border_thickness 0
 	floating_minimum_size 150 x 100
 
-    set $white FFFFFF
-	# 0.80 opacity
-	set $transparent_white FFFFFFCC 
-	set $transparent_red F52023CC
-	set $blue 010015
-	set $transparent_blue 010015CC
-	set $yellow FFFF00
-	set $transparent 00000000
-	
-	set $unfocused $transparent_white $blue $transparent_white
-	client.unfocused $unfocused
-	client.focused_inactive $unfocused
-	client.focused_tab_title $unfocused
+    ## Colours
+    set $_ #000000
+    set $white #FFFFFF
+    set $black #000000
+    set $gray #3c3836
+    set $subverses_orange #dd6819FF
 
-	client.focused $transparent_white $white $transparent_blue $transparent_blue
-	client.urgent $transparent_red $transparent_red $white
+    set $base00 #282828
+    set $base01 #3c3836
+    set $base02 #504945
+    set $base03 #665c54
+    set $base04 #d5c4a1
+    set $base05 #ebdbb2
+    set $base06 #fbf1c7
+    set $base07 #ebdbb2
+    set $base08 #cc241d
+    set $base09 #d65d0e
+    set $base0A #dd6819
+    set $base0B #98971a
+    set $base0C #458588
+    set $base0D #b16286
+    set $base0E #689d6a
+    set $base0F #a89984
+
+    ## Window Colours
+    # client.<class> <border> <background> [<text> [<indicator> [<child_border>]]]
+
+    client.focused   $_  $_  $_  $subverses_orange  $subverses_orange
+    client.focused_inactive  $base02  $base00  $base06  $base08  $base02
+    client.unfocused   $base01  $base00  $base06  $base08  $base02
+    client.urgent   $base07  $base00  $base08  $base0B  $base02
+    client.placeholder       $base02  $base00  $base06  $base03  $base04
+    client.background        $base00
 
 #
 # Gaps

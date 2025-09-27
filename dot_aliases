@@ -1,3 +1,12 @@
 alias vim=nvim
 alias glsrm="git clean -xfd"
 alias fd=fdfind
+
+# Zoxide alias for cd
+alias cd=z
+
+# eza aliases for ls
+alias ls=eza
+alias ll='eza -al'
+alias la='eza -A'
+alias l='eza -alh'
