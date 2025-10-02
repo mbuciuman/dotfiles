@@ -18,7 +18,8 @@
     set $white #FFFFFF
     set $black #000000
     set $gray #3c3836
-    set $subverses_orange #dd6819FF
+    set $subverses_orange #dd6819
+    set $dark_subverses_orange #B25518
 
     set $base00 #282828
     set $base01 #3c3836
@@ -40,7 +41,7 @@
     ## Window Colours
     # client.<class> <border> <background> [<text> [<indicator> [<child_border>]]]
 
-    client.focused   $_  $_  $_  $subverses_orange  $subverses_orange
+    client.focused   $_  $_  $_  $dark_subverses_orange  $dark_subverses_orange
     client.focused_inactive  $base02  $base00  $base06  $base08  $base02
     client.unfocused   $base01  $base00  $base06  $base08  $base02
     client.urgent   $base07  $base00  $base08  $base0B  $base02

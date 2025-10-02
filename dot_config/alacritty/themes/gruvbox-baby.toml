@@ -1,0 +1,53 @@
+# Colors
+
+# from gruvbox-baby repo:
+# DARK0=#0D0E0F
+# DARK=#0D0E0F
+# BACKGROUND_DARK=#171A1A
+# BACKGROUND=#1D2021
+# BACKGROUND_LIGHT=#32302F
+# FOREGROUND=#EBDBB2
+# GRAY=#DEDEDE
+# MEDIUM_GRAY=#504945
+# COMMENT=#665C54
+# MILK=#E7D7AD
+# ERROR_RED=#CC241D
+# RED=#FB4934
+# ORANGE=#D65D0E
+# BRIGHT_YELLOW=#FABD2F
+# SOFT_YELLOW=#EEBD35
+# PINK=#D4879C
+# MAGENTA=#B16286
+# SOFT_GREEN=#98971A
+# FOREST_GREEN=#689D6A
+# CLEAN_GREEN=#8EC07C
+# BLUE_GRAY=#458588
+# DARK_GRAY=#83A598
+# LIGHT_BLUE=#7FA2AC
+
+[colors.primary]
+  # Default colors
+    background = '#171a1a'
+    foreground = '#ebdbb2'
+
+  # Normal colors
+[colors.normal]
+    black =   '#0d0e0f'
+    red =     '#fb4934'
+    green =   '#98971a'
+    yellow =  '#eebd35'
+    blue =    '#458588'
+    magenta = '#b16286'
+    cyan =    '#83a598'
+    white =   '#e7d7ad'
+
+  # Bright colors
+[colors.bright]
+    black =   '#002b36'
+    red =     '#cc241d'
+    green =   '#689d6a'
+    yellow =  '#fabd2f'
+    blue =    '#7fa2ac'
+    magenta = '#d4879c'
+    cyan =    '#86BFBE'
+    white =   '#dedede'

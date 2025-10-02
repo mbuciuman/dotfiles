@@ -1,0 +1,88 @@
+# from cyberdream file repo
+# colors.default = {
+#     bg = "#16181a",
+#     bg_alt = "#1e2124",
+#     bg_highlight = "#3c4048",
+#     fg = "#ffffff",
+#     grey = "#7b8496",
+#     blue = "#5ea1ff",
+#     green = "#5eff6c",
+#     cyan = "#5ef1ff",
+#     red = "#ff6e5e",
+#     yellow = "#f1ff5e",
+#     magenta = "#ff5ef1",
+#     pink = "#ff5ea0",
+#     orange = "#ffbd5e",
+#     purple = "#bd5eff",
+# }
+#
+# M.light = {
+#     bg = "#ffffff",
+#     bg_alt = "#eaeaea",
+#     bg_highlight = "#acacac",
+#     fg = "#16181a",
+#     grey = "#7b8496",
+#     blue = "#0057d1",
+#     green = "#008b0c",
+#     cyan = "#008c99",
+#     red = "#d11500",
+#     yellow = "#997b00",
+#     magenta = "#d100bf",
+#     pink = "#f40064",
+#     orange = "#d17c00",
+#     purple = "#a018ff",
+# }
+
+[colors.primary]
+#     bg = "#16181a",
+#     bg_alt = "#1e2124",
+#     bg_highlight = "#3c4048",
+#     fg = "#ffffff",
+    background = '#16181a'
+    foreground = '#ffffff'
+
+[colors.selection]
+background = "#3c4048"
+foreground = "#ffffff"
+
+  # Normal colors
+[colors.normal]
+#     grey = "#7b8496",
+#     blue = "#5ea1ff",
+#     green = "#5eff6c",
+#     cyan = "#5ef1ff",
+#     red = "#ff6e5e",
+#     yellow = "#f1ff5e",
+#     magenta = "#ff5ef1",
+#     pink = "#ff5ea0",
+#     orange = "#ffbd5e",
+#     purple = "#bd5eff",
+    black =   '#7b8496'
+    red =     '#ff6e5e'
+    green =   '#5eff6c'
+    yellow =  '#f1ff5e'
+    blue =    '#5ea1ff'
+    magenta = '#ff5ef1'
+    cyan =    '#5ef1ff'
+    white =   '#ffffff'
+
+  # Bright colors
+[colors.bright]
+#     grey = "#7b8496",
+#     blue = "#0057d1",
+#     green = "#008b0c",
+#     cyan = "#008c99",
+#     red = "#d11500",
+#     yellow = "#997b00",
+#     magenta = "#d100bf",
+#     pink = "#f40064",
+#     orange = "#d17c00",
+#     purple = "#a018ff",
+    black =   '#7b8496'
+    red =     '#d11500'
+    green =   '#008b0c'
+    yellow =  '#997b00'
+    blue =    '#0057d1'
+    magenta = '#d100bf'
+    cyan =    '#008c99'
+    white =   '#dedede'

@@ -1,3 +1,8 @@
+[general]
+import = [
+    "~/.config/alacritty/themes/cyberdream_custom.toml"
+]
+
 [font]
 size = 13.0
 
@@ -5,17 +10,17 @@ size = 13.0
 opacity = 0.85  # 1.0 = opaque, 0.0 = fully transparent
 
 [font.normal]
-family = "PragmataPro Nerd Font"
+family = "monospace"
 style = "Regular"
 
 [font.bold]
-family = "PragmataPro Nerd Font"
+family = "monospace"
 style = "Bold"
 
 [font.italic]
-family = "PragmataPro Nerd Font"
+family = "monospace"
 style = "Italic"
 
 [font.bold_italic]
-family = "PragmataPro Nerd Font"
+family = "monospace"
 style = "Bold Italic"

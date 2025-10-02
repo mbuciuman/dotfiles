@@ -1,3 +1,9 @@
+# sets env var for OBS Studio to record desktop
+QT_QPA_PLATFORM=wayland
+
+# sets dark GTK theme
+export GTK_THEME=Adwaita:dark
+
 if [[ -z $DISPLAY ]] && [[ $(tty) == /dev/tty1 ]]; then
     exec sway
 fi

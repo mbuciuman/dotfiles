@@ -17,16 +17,12 @@ exec --no-startup-id firefox
 exec --no-startup-id alacritty -e ~/.config/alacritty/start_tmux_dev.sh
 
 # Discord to workspace 5
-exec --no-startup-id discord
-
-# Spotify to workspace 6
-exec --no-startup-id spotify
+# exec --no-startup-id discord
 
 ### Workspace assignments
 assign [app_id="firefox"] 1
 assign [app_id="Alacritty"] 2
-assign [app_id="Discord"] 5
-assign [app_id="Spotify"] 6
+# assign [app_id="Discord"] 5
 
 ### Idle configuration
 #
@@ -215,7 +211,7 @@ include $HOME/.config/sway/config.d/windows
 
 # Wallpaper
 set $default_wallpaper $HOME/Downloads/Subverses_Wallpaper_1440.png
-output * bg $default_wallpaper fill
+exec_always swaybg -m fill -i $default_wallpaper
 
 #
 # Volume, Monitor brightness, Media players
@@ -227,8 +223,8 @@ output * bg $default_wallpaper fill
      bindsym $mod+Shift+F1 exec swayosd-client --input-volume mute-toggle
      bindsym $mod+Shift+F3 exec pactl set-source-volume @DEFAULT_SOURCE@ +5%
      bindsym $mod+Shift+F2 exec pactl set-source-volume @DEFAULT_SOURCE@ -5%
-     bindsym $mod+F6 exec brightnessctl s '+10%'
-     bindsym $mod+F5 exec brightnessctl s '10%-'
+     # bindsym $mod+F6 exec light -A 10
+     # bindsym $mod+F5 exec light -U 10
      bindsym $mod+p exec playerctl play-pause
      bindsym $mod+Plus exec playerctl next
      bindsym $mod+o exec playerctl previous
@@ -237,18 +233,18 @@ bindsym XF86AudioRaiseVolume exec swayosd-client --output-volume raise
 bindsym XF86AudioLowerVolume exec swayosd-client --output-volume lower
 #bindsym XF86AudioMute exec swayosd-client --output-volume mute-toggle
 #bindsym XF86AudioMicMute exec swayosd-client --input-volume mute-toggle
+
 # Mic mute key
 bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle && swayosd-client --microphone
 
 # Audio mute key
 bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle && swayosd-client --speaker
 
-
 bindsym Shift+XF86AudioRaiseVolume exec swayosd-client --input-volume raise
 bindsym Shift+XF86AudioLowerVolume exec swayosd-client --input-volume lower
 
-bindsym XF86MonBrightnessUp exec brightnessctl s '+10%'
-bindsym XF86MonBrightnessDown exec brightnessctl s '-10%'
+bindsym XF86MonBrightnessUp exec light -A 10
+bindsym XF86MonBrightnessDown exec light -U 10
 
 # bindsym --locked XF86KbdBrightnessUp exec ~/.config/sway/scripts/kbdlight.sh n
 # bindsym --locked XF86KbdBrightnessDown exec ~/.config/sway/scripts/kbdlight.sh p
@@ -325,4 +321,4 @@ exec swayosd-server
 exec_always --no-startup-id copyq
 
 # start mako
-exec_always mako --font 'JetBrainsMono NF 10' --background-color '#000000' --border-color '#dd6819' --default-timeout 7000 --width 400 --markup 1 --border-radius 5
+exec_always mako --font "monospace 10" --background-color '#000000' --border-color '#dd6819' --default-timeout 7000 --width 400 --markup 1 --border-radius 5

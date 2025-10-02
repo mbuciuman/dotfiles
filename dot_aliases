@@ -1,6 +1,5 @@
 alias vim=nvim
 alias glsrm="git clean -xfd"
-alias fd=fdfind
 
 # Zoxide alias for cd
 alias cd=z
@@ -10,3 +9,8 @@ alias ls=eza
 alias ll='eza -al'
 alias la='eza -A'
 alias l='eza -alh'
+
+# pacman
+alias pi='pacman -S'
+alias pd='pacman -Rs'
+alias pu='pacman -Syu'
