@@ -51,6 +51,9 @@ assign [app_id="Alacritty"] 2
     bindsym $mod+d exec $menu
     #bindsym --no-repeat --release Super_L exec pkill $menu || $menu
 
+    # Bind clipboard
+    bindsym $mod+s exec cliphist list | fuzzel --dmenu | cliphist decode | wl-copy
+
     # Start control panel
     bindsym $mod+x exec better-control
 
@@ -133,7 +136,7 @@ assign [app_id="Alacritty"] 2
     bindsym $mod+v splitv
 
     # Switch the current container between different layout styles
-    bindsym $mod+s layout stacking
+    # bindsym $mod+s layout stacking
     bindsym $mod+w layout tabbed
     bindsym $mod+e layout toggle split
 
@@ -231,8 +234,6 @@ exec_always swaybg -m fill -i $default_wallpaper
 
 bindsym XF86AudioRaiseVolume exec swayosd-client --output-volume raise
 bindsym XF86AudioLowerVolume exec swayosd-client --output-volume lower
-#bindsym XF86AudioMute exec swayosd-client --output-volume mute-toggle
-#bindsym XF86AudioMicMute exec swayosd-client --input-volume mute-toggle
 
 # Mic mute key
 bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle && swayosd-client --microphone
@@ -246,17 +247,18 @@ bindsym Shift+XF86AudioLowerVolume exec swayosd-client --input-volume lower
 bindsym XF86MonBrightnessUp exec light -A 10
 bindsym XF86MonBrightnessDown exec light -U 10
 
-# bindsym --locked XF86KbdBrightnessUp exec ~/.config/sway/scripts/kbdlight.sh n
-# bindsym --locked XF86KbdBrightnessDown exec ~/.config/sway/scripts/kbdlight.sh p
+
 #
 # Screenshots
 #
 # Window
-bindsym $mod+F7 exec shotman -c window -C
-# Monitor
-bindsym $mod+F8 exec shotman -c output -C
-# Region
-bindsym $mod+F9 exec shotman -c region -C
+# bindsym $mod+F7 exec shotman -c window -C
+# # Monitor
+# bindsym $mod+F8 exec shotman -c output -C
+# # Region
+# bindsym $mod+F9 exec shotman -c region -C
+
+bindsym $mod+T exec flameshot gui
 
 #
 # JetBrains Config
@@ -318,7 +320,10 @@ include $HOME/.config/sway/config.d/swayfx
 exec swayosd-server
 
 # start copyq
-exec_always --no-startup-id copyq
+# exec_always --no-startup-id copyq
 
 # start mako
 exec_always mako --font "monospace 10" --background-color '#000000' --border-color '#dd6819' --default-timeout 7000 --width 400 --markup 1 --border-radius 5
+
+# start cliphist
+exec_always wl-paste --watch cliphist store
