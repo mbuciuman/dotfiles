@@ -7,7 +7,6 @@
 #
 	default_border pixel 4
 	default_floating_border pixel 4
-	#font pango:monospace 0
 	font pango:JetBrainsMono NF ExtraBold 18
 	titlebar_padding 5
 	titlebar_border_thickness 0
@@ -20,6 +19,7 @@
     set $gray #3c3836
     set $subverses_orange #dd6819
     set $dark_subverses_orange #B25518
+    set $light_subverses_orange #FF9500
 
     set $base00 #282828
     set $base01 #3c3836
@@ -41,7 +41,7 @@
     ## Window Colours
     # client.<class> <border> <background> [<text> [<indicator> [<child_border>]]]
 
-    client.focused   $_  $_  $_  $dark_subverses_orange  $dark_subverses_orange
+    client.focused   $_  $_  $_  $light_subverses_orange  $light_subverses_orange
     client.focused_inactive  $base02  $base00  $base06  $base08  $base02
     client.unfocused   $base01  $base00  $base06  $base08  $base02
     client.urgent   $base07  $base00  $base08  $base0B  $base02

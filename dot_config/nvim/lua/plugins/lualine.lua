@@ -51,7 +51,8 @@ return {
         "nvim-lualine/lualine.nvim",
         event = "VeryLazy",
         init = function()
-            vim.g.lualine_laststatus = vim.o.laststatus
+            -- sets global lualine
+            vim.g.lualine_laststatus = 3
             if vim.fn.argc(-1) > 0 then
                 -- set an empty statusline till lualine loads
                 vim.o.statusline = " "
@@ -74,6 +75,8 @@ return {
                     theme = "auto",
                     globalstatus = vim.o.laststatus == 3,
                     disabled_filetypes = { statusline = { "dashboard", "alpha", "ministarter", "snacks_dashboard" } },
+                    section_separators = "",
+                    component_separators = "",
                 },
                 sections = {
                     lualine_a = { "mode" },
@@ -98,8 +101,10 @@ return {
                         -- stylua: ignore
                         {
                             function() return require("noice").api.status.command.get() end,
-                            cond = function() return package.loaded["noice"] and
-                                require("noice").api.status.command.has() end,
+                            cond = function()
+                                return package.loaded["noice"] and
+                                    require("noice").api.status.command.has()
+                            end,
                             color = function() return { fg = Snacks.util.color("Statement") } end,
                         },
                         -- stylua: ignore
