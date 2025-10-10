@@ -232,6 +232,9 @@ exec_always swaybg -m fill -i $default_wallpaper
      bindsym $mod+Plus exec playerctl next
      bindsym $mod+o exec playerctl previous
 
+# Not sure where else to put this, but this is how to change the gain of the microphone
+# pactl set-source-volume alsa_input.pci-0000_00_1f.3.analog-stereo 10%
+
 bindsym XF86AudioRaiseVolume exec swayosd-client --output-volume raise
 bindsym XF86AudioLowerVolume exec swayosd-client --output-volume lower
 

@@ -1,19 +1,34 @@
 return {
-	-- LSP Configuration
-	{
-		"neovim/nvim-lspconfig",
-	},
-
-	-- Debug Adapter Configuration
-	{
-		"mason-org/mason.nvim",
-		opts = {},
-	},
-	{
-		"jay-babu/mason-nvim-dap.nvim",
-		dependencies = { "mfussenegger/nvim-dap" },
-		opts = {
-			ensure_installed = { "dart" },
-		},
-	},
+    -- LSP Configuration
+    {
+        'neovim/nvim-lspconfig',
+        opts = {
+            servers = {
+                dartls = {
+                    -- Additional dartls config (optional)
+                    settings = {
+                        dart = {
+                            enableSdkFormatter = true,
+                            lineLength = 100,
+                        },
+                    },
+                },
+            },
+        },
+        enabled = true -- cannot coexist with flutter-tools
+    },
+    -- Debug Adapter Configuration
+    {
+        "mason-org/mason.nvim",
+        opts = {},
+        enabled = true
+    },
+    {
+        "jay-babu/mason-nvim-dap.nvim",
+        dependencies = { "mfussenegger/nvim-dap" },
+        opts = {
+            ensure_installed = { "dart" },
+        },
+        enabled = true
+    },
 }

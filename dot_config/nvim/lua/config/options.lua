@@ -28,7 +28,7 @@ vim.opt.expandtab = true
 -- vim.opt.termguicolors = true
 
 -- Enable dartls LSP
--- vim.lsp.enable("dartls")
+vim.lsp.enable("dartls")
 
 -- Certain but not all LSPs will set the root directory based on which buffer
 -- is active. This affects picking files. I found this to be disruptive, for
@@ -98,3 +98,27 @@ vim.opt.clipboard = "unnamedplus"
 -- 	},
 -- 	cache_enabled = 1,
 -- }
+
+-- sync buffers automatically
+vim.opt.autoread = true
+-- disable neovim generating a swapfile and showing the error
+vim.opt.swapfile = false
+
+-- indentation
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = "dart",
+    callback = function()
+        vim.opt_local.tabstop = 2
+        vim.opt_local.shiftwidth = 2
+        vim.opt_local.expandtab = true
+    end,
+})
+
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = "python,java",
+    callback = function()
+        vim.opt_local.tabstop = 4
+        vim.opt_local.shiftwidth = 4
+        vim.opt_local.expandtab = true
+    end,
+})

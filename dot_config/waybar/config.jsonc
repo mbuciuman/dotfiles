@@ -95,15 +95,15 @@
     },
     "battery": {
         "states": {
-            // "good": 95,
+            "good": 95,
             "warning": 30,
             "critical": 15
         },
-        "format": "{icon}",
-        "format-full": "{icon}",
-        "format-charging": "{icon} ",
-        "format-plugged": "{icon} ",
-        "format-alt": "{icon}",
+        "format": "{icon} ",
+        "format-full": "{icon} ",
+        "format-charging": "{icon}  ",
+        "format-plugged": "{icon}  ",
+        "format-alt": "{icon} ",
         "format-icons": [
             "",
             "",
