@@ -33,6 +33,7 @@ return {
                 settings = {
                     -- analysisExcludedFolders = {} -- really slow
                     -- analysisExcludedFolders = { "/opt/flutter/packages", "/opt/flutter/.pub-cache", "/home/mbuci/.cache/flutter_sdk/packages" } -- can't ignore cache or you get no debugging info
+                    analysisExcludedFolders = { "/opt/flutter/packages", "/opt/flutter/.pub-cache", "/home/mbuci/repos/SubversesFlutterMVP/subverses_flutter/build" } -- can't ignore cache or you get no debugging info
                 }
             }
         },
@@ -51,6 +52,7 @@ return {
             { "<leader>FR", "<cmd>FlutterRun<cr>",                    desc = "Flutter: Run Project" },
             { "<leader>Fq", "<cmd>FlutterQuit<cr>",                   desc = "Flutter: End Running Session" },
             { "<leader>Fl", "<cmd>FlutterLogToggle<cr>",              desc = "Flutter: Toggle Log" },
+            { "<leader>FC", "<cmd>FlutterLogClear<cr>",               desc = "Flutter: Clear Log" },
             { "J",          "<cmd>lua vim.lsp.buf.code_action()<CR>", desc = "LSP Code Actions" },
         },
         enabled = true -- cannot coexist with nvim-lspconfig

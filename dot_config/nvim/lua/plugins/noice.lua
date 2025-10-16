@@ -14,7 +14,15 @@ return {
                 filter = {
                     event = "msg_show",
                     kind = "emsg",
-                    find = "Error detected while processing TextChanged Autocommands"
+                    find = "request handler for client"
+                },
+                opts = { skip = true },
+            },
+            {
+                filter = {
+                    event = "msg_show",
+                    kind = "emsg",
+                    find = "Error detected while processing"
                 },
                 opts = { skip = true },
             },

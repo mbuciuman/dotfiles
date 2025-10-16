@@ -86,3 +86,7 @@ gsettings set org.gnome.desktop.notifications show-banners false
 
 # Zoxide
 eval "$(zoxide init zsh)"
+
+# Start ssh-agent
+eval "$(ssh-agent)" &> /dev/null
+ssh-add ~/.ssh/id_rsa &> /dev/null

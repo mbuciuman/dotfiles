@@ -68,8 +68,9 @@ opt.listchars = {
 }
 opt.list = false
 
--- Don't auto-scroll N number of lines from the top of the buffer.
-opt.scrolloff = 0
+-- Auto-scroll N number of lines from the top of the buffer.
+opt.scrolloff = 10
+opt.sidescrolloff = 10
 
 -- Allow left and right arrow keys to move to the previous and next line.
 opt.whichwrap = "b,s,<,>"
@@ -85,7 +86,7 @@ vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 
 -- Clipboard settings
-vim.opt.clipboard = "unnamedplus"
+opt.clipboard = "unnamedplus"
 -- vim.g.clipboard = {
 -- 	name = "CopyQ",
 -- 	copy = {
@@ -100,9 +101,9 @@ vim.opt.clipboard = "unnamedplus"
 -- }
 
 -- sync buffers automatically
-vim.opt.autoread = true
--- disable neovim generating a swapfile and showing the error
-vim.opt.swapfile = false
+opt.autoread = true
+-- enable neovim generating a swapfile and showing the error
+opt.swapfile = true
 
 -- indentation
 vim.api.nvim_create_autocmd("FileType", {
@@ -122,3 +123,6 @@ vim.api.nvim_create_autocmd("FileType", {
         vim.opt_local.expandtab = true
     end,
 })
+
+-- Add borders to popups
+vim.o.winborder = 'rounded'
