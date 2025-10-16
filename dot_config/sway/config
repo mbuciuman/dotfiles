@@ -51,7 +51,7 @@ assign [app_id="Alacritty"] 2
     bindsym $mod+d exec $menu
     #bindsym --no-repeat --release Super_L exec pkill $menu || $menu
 
-    # Bind clipboard
+    # Bind clipboard search
     bindsym $mod+s exec cliphist list | fuzzel --dmenu | cliphist decode | wl-copy
 
     # Start control panel
