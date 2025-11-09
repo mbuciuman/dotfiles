@@ -175,7 +175,7 @@
         "format": "{}°F",
         "tooltip": true,
         "interval": 3600,
-        "exec": "wttrbar --date-format \"%Y.%m.%d\" -l en --nerd --fahrenheit --location denpasar",
+        "exec": "wttrbar --date-format \"%Y.%m.%d\" -l en --nerd --fahrenheit --location denver",
         "return-type": "json"
     }
 }

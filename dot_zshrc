@@ -1,5 +1,5 @@
 # Path
-export PATH=$PATH:~/go/bin/:~/Android/Sdk/platform-tools/
+export PATH=$PATH:~/go/bin/:~/Android/Sdk/platform-tools/:~/.pub-cache/bin/:~/.cargo/bin/
 
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"

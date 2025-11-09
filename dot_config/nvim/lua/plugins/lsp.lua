@@ -17,6 +17,13 @@ return {
         },
         enabled = true -- cannot coexist with flutter-tools
     },
+    {
+        "ibhagwan/fzf-lua",
+        keys = {
+            -- disable the keymap to grep files
+            { "gr", false },
+        },
+    },
     -- Debug Adapter Configuration
     {
         "mason-org/mason.nvim",

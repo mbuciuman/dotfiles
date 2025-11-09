@@ -1,0 +1,58 @@
+# Tangere: https://github.com/ftonneau/tangere-terminal
+# --------------------------------------------------------------------------------
+# Format: alacritty
+# --------------------------------------------------------------------------------
+# Light palette
+# ---------------
+
+# [colors.primary]
+# foreground = '#000000'
+# background = '#fdfdfa'
+#
+# [colors.normal]
+# black = '#ffffff'
+# red = '#9c341f'
+# green = '#004c73'
+# yellow = '#805619'
+# blue = '#223355'
+# magenta = '#663d52'
+# cyan = '#4b5363'
+# white = '#898e99'
+#
+# [colors.bright]
+# black = '#686868'
+# red = '#9c341f'
+# green = '#004c73'
+# yellow = '#40290a'
+# blue = '#223355'
+# magenta = '#663d52'
+# cyan = '#002a40'
+# white = '#d1d1d1'
+
+# ---------------
+# Dark palette
+# ---------------
+
+[colors.primary]
+foreground = '#fdfdd9'
+background = '#1a2938'
+
+[colors.normal]
+black = '#000000'
+red = '#f2826d'
+green = '#6dafb5'
+yellow = '#e0ba70'
+blue = '#8fb4cd'
+magenta = '#bb98d9'
+cyan = '#b2babf'
+white = '#e6e4d3'
+
+[colors.bright]
+black = '#b3b3b3'
+red = '#f2826d'
+green = '#6dafb5'
+yellow = '#ffdd99'
+blue = '#8fb4cd'
+magenta = '#bb98d9'
+cyan = '#a9c9cc'
+white = '#2f4656'

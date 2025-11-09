@@ -1,6 +1,7 @@
 [general]
 import = [
     "~/.config/alacritty/themes/cyberdream_custom.toml"
+    # "~/.config/alacritty/themes/tangere.toml"
 ]
 
 [font]
