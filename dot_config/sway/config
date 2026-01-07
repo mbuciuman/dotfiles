@@ -10,8 +10,8 @@ set $menu fuzzel
 set $mod Mod1
 
 ### Autostart applications
-# Firefox to workspace 1
-exec --no-startup-id firefox
+# Librewolf to workspace 1
+exec --no-startup-id librewolf
 
 # Alacritty with tmux on workspace 2
 exec --no-startup-id alacritty -e ~/.config/alacritty/start_tmux_dev.sh
@@ -20,7 +20,7 @@ exec --no-startup-id alacritty -e ~/.config/alacritty/start_tmux_dev.sh
 # exec --no-startup-id discord
 
 ### Workspace assignments
-assign [app_id="firefox"] 1
+assign [app_id="librewolf"] 1
 assign [app_id="Alacritty"] 2
 # assign [app_id="Discord"] 5
 

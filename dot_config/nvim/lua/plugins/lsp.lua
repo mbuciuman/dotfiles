@@ -18,9 +18,9 @@ return {
         enabled = true -- cannot coexist with flutter-tools
     },
     {
-        "ibhagwan/fzf-lua",
+        "folke/which-key.nvim",
         keys = {
-            -- disable the keymap to grep files
+            -- disable the keymap as it breaks the bound lsp subcommands under gr<key>
             { "gr", false },
         },
     },
